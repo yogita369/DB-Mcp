@@ -1,0 +1,8 @@
+node_modules
+src
+*.log
+.env
+profiles.json
+history.db
+database.db
+tsconfig.json

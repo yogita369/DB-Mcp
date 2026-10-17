@@ -1,0 +1,35 @@
+{
+  "name": "db-mcp-server",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "seed:mongo": "tsx src/db/mongo/seed.ts",
+    "migrate": "tsx src/db/sql/migrate.ts",
+    "start": "node build/index.js",
+    "start:http": "cross-env TRANSPORT=http node build/index.js",
+    "dev:http": "TRANSPORT=http tsx src/index.ts",
+    "test": "node build/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "Production-ready MCP server for SQL and MongoDB",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "better-sqlite3": "^12.9.0",
+    "dotenv": "^17.4.2",
+    "mongodb": "^7.1.1",
+    "pg": "^8.20.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.20.0",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.5.0"
+  }
+}
